@@ -1,8 +1,6 @@
-import 'package:ecommerce/presentation/ui/auth/otp_verification_screen.dart';
 import 'package:ecommerce/presentation/ui/utility/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 
 class CompleteProfileScreen extends StatefulWidget {
   const CompleteProfileScreen({super.key});
@@ -22,9 +20,6 @@ class _CompleteProfileScreen extends State<CompleteProfileScreen> {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-                const SizedBox(
-                  height: 80,
-                ),
                 Center(
                     child: SvgPicture.asset(
                       ImageAssets.craftyBayLogoSVG,
@@ -37,7 +32,7 @@ class _CompleteProfileScreen extends State<CompleteProfileScreen> {
                     style: Theme.of(context)
                         .textTheme
                         .titleLarge
-                        ?.copyWith(fontSize: 24)),
+                        ?.copyWith(fontSize: 24, fontWeight: FontWeight.bold),),
                 const SizedBox(
                   height: 16,
                 ),
@@ -72,8 +67,10 @@ class _CompleteProfileScreen extends State<CompleteProfileScreen> {
                 ),
                 const SizedBox(height: 12,),
                 TextFormField(
+                  maxLines: 6,
                   decoration: const InputDecoration(
-                    hintText: 'First Name',
+                    hintText: 'Shipping Address',
+                    contentPadding: EdgeInsets.symmetric(horizontal: 16,vertical: 16),
                   ),
                 ),
                 const SizedBox(height: 8,),

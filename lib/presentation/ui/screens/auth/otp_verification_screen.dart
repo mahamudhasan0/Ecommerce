@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:ecommerce/presentation/ui/auth/complete_profile_screen.dart';
+import 'package:ecommerce/presentation/ui/screens/auth/complete_profile_screen.dart';
 import 'package:ecommerce/presentation/ui/utility/app_color.dart';
 import 'package:ecommerce/presentation/ui/utility/image_assets.dart';
 import 'package:flutter/material.dart';

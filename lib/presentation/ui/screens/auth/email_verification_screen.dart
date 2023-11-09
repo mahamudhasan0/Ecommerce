@@ -1,4 +1,4 @@
-import 'package:ecommerce/presentation/ui/auth/otp_verification_screen.dart';
+import 'package:ecommerce/presentation/ui/screens/auth/otp_verification_screen.dart';
 import 'package:ecommerce/presentation/ui/utility/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -52,7 +52,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                     onPressed: () {
-                      Get.to(OTPVerificationScreen());
+                      Get.to(const OTPVerificationScreen());
                     },
                     child: const Text(
                       'Next',
