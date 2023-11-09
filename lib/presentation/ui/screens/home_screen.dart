@@ -1,7 +1,7 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ecommerce/presentation/ui/utility/app_color.dart';
+import 'package:ecommerce/presentation/ui/widgets/category_card.dart';
 import 'package:ecommerce/presentation/ui/widgets/circular_icon_button.dart';
-import 'package:ecommerce/presentation/ui/widgets/home_slider.dart';
+import 'package:ecommerce/presentation/ui/widgets/home_widgets/home_slider.dart';
+import 'package:ecommerce/presentation/ui/widgets/section_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -13,7 +13,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +65,31 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 16,
               ),
-             const HomeSlider(),
+              const HomeSlider(),
+              SectionHeader(
+                title: 'All Categories',
+                onTap: () {},
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              SizedBox(
+                height: 90,
+                child: ListView.builder(
+                  itemCount: 10,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return const CategoryCard();
+                  },
+                ),
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              SectionHeader(
+                title: 'Popular',
+                onTap: () {},
+              ),
             ],
           ),
         ),
