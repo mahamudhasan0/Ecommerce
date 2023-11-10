@@ -1,6 +1,7 @@
 import 'package:ecommerce/presentation/ui/widgets/category_card.dart';
 import 'package:ecommerce/presentation/ui/widgets/circular_icon_button.dart';
 import 'package:ecommerce/presentation/ui/widgets/home_widgets/home_slider.dart';
+import 'package:ecommerce/presentation/ui/widgets/product_card.dart';
 import 'package:ecommerce/presentation/ui/widgets/section_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -90,6 +91,59 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: 'Popular',
                 onTap: () {},
               ),
+              const SizedBox(
+                height: 8,
+              ),
+              SizedBox(
+                height: 165,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 20,
+                  itemBuilder: (context, index) {
+                    return const ProductCard();
+                  },
+                ),
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              SectionHeader(
+                title: 'Special',
+                onTap: () {},
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              SizedBox(
+                height: 165,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 20,
+                  itemBuilder: (context, index) {
+                    return const ProductCard();
+                  },
+                ),
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              SectionHeader(
+                title: 'New',
+                onTap: () {},
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              SizedBox(
+                height: 165,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 20,
+                  itemBuilder: (context, index) {
+                    return const ProductCard();
+                  },
+                ),
+              )
             ],
           ),
         ),
